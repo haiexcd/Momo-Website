@@ -194,6 +194,38 @@ hr {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+/* Menu Section */
+#menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+  gap: 1rem;
+  margin-bottom: 3.45rem;
+}
+
+.menu-item {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.menu-item img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Grid for Mobile */
+@media (max-width: 768px) {
+  #menu-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile view */
+  }
+}
+
 /* Calendar Section */
 #calendar {
   max-width: 90%;
